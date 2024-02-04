@@ -1,0 +1,50 @@
+Projet de Web Scraping pour la CAN 2023 - Documentation
+Objectif du Projet :
+
+Le projet de Web Scraping vise à collecter les statistiques des matchs des phases de poules de la Coupe d'Afrique des Nations (CAN) 2023.
+Description du Projet :
+
+    Partie 1 : Collecte des Liens des Matchs
+        Utilisation de Selenium pour accéder à la page Google Search qui contient les liens des matchs de la CAN 2023.
+        Scraping des liens des matchs à partir des attributs data-df-match-mid des éléments de classe ml-bs-u.
+        Construction des liens complets à partir des identifiants récupérés et stockage dans une liste.
+
+
+    Partie 2 : Scraping des Statistiques des Matchs
+        Utilisation de Selenium pour accéder à chaque lien de match.
+        Extraction des statistiques à l'aide de BeautifulSoup et Selenium.
+        Création d'un dictionnaire pour stocker les données.
+
+
+    Partie 3 : Collecte des Statistiques Vidéo des Matchs
+        Utilisation de Selenium pour accéder à chaque lien vidéo de match.
+        Scraping des statistiques vidéo telles que le titre, le nombre d'abonnés, le nombre de vues, les likes, la date de publication, la durée,       les commentaires et la description.
+        Construction d'un dictionnaire pour stocker les données vidéo.
+
+
+Partie 4 : Fusion des DataFrames
+
+    Fusion des DataFrames contenant les  statistiques vidéo en fonction de l'identifiant 'id'
+
+Partie 5:Statistiques de la poule
+
+MJ: nombre de matchs joués
+
+G:nombre de matchs gagnés
+
+N:nombre de matchs nuls
+
+P:ombre de matchs perdu
+
+BP:Buts marqués
+
+BC:Buts encaissés
+
+DB:Difference de buts
+
+Pts:Points
+
+
+
+En resumé le code utilise Selenium pour automatiser le navigateur(microsoft edge) et récupérer les données dynamiques. BeautifulSoup est utilisé pour extraire les données du HTML.Les données sont stockées dans des DataFrames pandas pour une manipulation facile.
+
